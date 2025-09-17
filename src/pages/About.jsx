@@ -142,7 +142,7 @@ const About = () => {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="text-center p-6 rounded-xl bg-cream-200 hover:bg-cream-300 transition-all duration-300 hover:transform hover:scale-105 animate-slide-up"
+                className="text-center p-6 rounded-xl bg-cream-200 border border-cream-300 hover:bg-cream-300 hover:border-cream-400 transition-all duration-300 hover:transform hover:scale-105 animate-slide-up shadow-sm hover:shadow-md"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
@@ -169,10 +169,10 @@ const About = () => {
           <div className="space-y-8">
             {timeline.map((item, index) => (
               <div key={index} className="flex items-start space-x-6 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex-shrink-0 w-20 h-20 bg-cream-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                <div className="flex-shrink-0 w-20 h-20 bg-cream-600 border-2 border-cream-700 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
                   {item.year}
                 </div>
-                <div className="flex-1 bg-cream-100 rounded-lg p-6">
+                <div className="flex-1 bg-cream-100 border border-cream-200 rounded-lg p-6 shadow-sm">
                   <h3 className="text-xl font-semibold text-cream-900 mb-2">{item.title}</h3>
                   <p className="text-cream-700 leading-relaxed">{item.description}</p>
                 </div>
@@ -196,11 +196,11 @@ const About = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {team.map((member, index) => (
-              <div key={index} className="text-center bg-cream-200 rounded-xl p-6 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="text-center bg-cream-200 border border-cream-300 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
+                  className="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-cream-400 shadow-md"
                 />
                 <h3 className="text-xl font-semibold text-cream-900 mb-2">{member.name}</h3>
                 <p className="text-cream-600 font-medium mb-3">{member.role}</p>
@@ -224,27 +224,27 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-cream-100 rounded-xl p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <h3 className="text-xl font-semibold text-cream-900 mb-3">🤝 Empathy First</h3>
               <p className="text-cream-700">Every feature is designed with genuine care and understanding for human emotional needs.</p>
             </div>
-            <div className="bg-cream-100 rounded-xl p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <h3 className="text-xl font-semibold text-cream-900 mb-3">🔒 Privacy & Trust</h3>
               <p className="text-cream-700">Your emotional data is sacred. We ensure complete privacy and security in all interactions.</p>
             </div>
-            <div className="bg-cream-100 rounded-xl p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <h3 className="text-xl font-semibold text-cream-900 mb-3">🚀 Innovation</h3>
               <p className="text-cream-700">Continuously pushing the boundaries of AI and robotics to better serve human wellness.</p>
             </div>
-            <div className="bg-cream-100 rounded-xl p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <h3 className="text-xl font-semibold text-cream-900 mb-3">🌍 Accessibility</h3>
               <p className="text-cream-700">Making emotional support and companionship accessible to everyone, everywhere.</p>
             </div>
-            <div className="bg-cream-100 rounded-xl p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <h3 className="text-xl font-semibold text-cream-900 mb-3">💡 Transparency</h3>
               <p className="text-cream-700">Open and honest about our technology, capabilities, and limitations.</p>
             </div>
-            <div className="bg-cream-100 rounded-xl p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <h3 className="text-xl font-semibold text-cream-900 mb-3">🎯 Excellence</h3>
               <p className="text-cream-700">Committed to delivering the highest quality products and support experiences.</p>
             </div>

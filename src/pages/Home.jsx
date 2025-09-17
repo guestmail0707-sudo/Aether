@@ -59,7 +59,9 @@ const Home = () => {
             <div className="text-center lg:text-left animate-fade-in">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-cream-900 mb-6 leading-tight">
                 Meet Your New
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cream-700 to-cream-800"> Companion</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cream-700 to-cream-800">
+                  {" "}Companion
+                </span>
               </h1>
               <p className="text-lg md:text-xl text-cream-700 mb-8 leading-relaxed">
                 Aether Soul is an intelligent robot companion designed to provide emotional support and companionship. 
@@ -105,7 +107,7 @@ const Home = () => {
             {features.map((feature, index) => (
               <div 
                 key={index}
-                className="text-center p-6 rounded-xl bg-cream-200 hover:bg-cream-300 transition-all duration-300 hover:transform hover:scale-105 animate-slide-up"
+                className="text-center p-6 rounded-xl bg-cream-200 border border-cream-300 hover:bg-cream-300 hover:border-cream-400 transition-all duration-300 hover:transform hover:scale-105 animate-slide-up shadow-sm hover:shadow-md"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="text-4xl mb-4">{feature.icon}</div>
@@ -158,7 +160,7 @@ const Home = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-cream-200 rounded-xl p-6 shadow-lg">
+              <div key={index} className="bg-cream-200 border border-cream-300 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
                 <div className="flex mb-4">
                   {[...Array(testimonial.rating)].map((_, i) => (
                     <span key={i} className="text-cream-600 text-xl">⭐</span>

@@ -155,7 +155,7 @@ const FAQs = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {quickTips.map((tip, index) => (
-              <div key={index} className="bg-cream-200 rounded-lg p-4 text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="bg-cream-200 border border-cream-300 rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow duration-200 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="text-3xl mb-2">{tip.icon}</div>
                 <h3 className="font-semibold text-cream-900 mb-2">{tip.title}</h3>
                 <p className="text-sm text-cream-700">{tip.tip}</p>
@@ -178,7 +178,7 @@ const FAQs = () => {
                 {category.faqs.map((faq, faqIndex) => (
                   <div 
                     key={faqIndex}
-                    className="bg-cream-100 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 animate-slide-up"
+                    className="bg-cream-100 border border-cream-200 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow duration-200 animate-slide-up"
                     style={{ animationDelay: `${(categoryIndex * 0.1) + (faqIndex * 0.05)}s` }}
                   >
                     <h3 className="text-lg md:text-xl font-semibold text-cream-900 mb-4">
@@ -207,17 +207,17 @@ const FAQs = () => {
           </p>
           
           <div className="grid md:grid-cols-3 gap-6 mb-8">
-            <div className="bg-cream-100 rounded-lg p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <div className="text-3xl mb-3">📧</div>
               <h3 className="font-semibold text-cream-900 mb-2">Email Support</h3>
               <p className="text-cream-700 text-sm">Get detailed answers within 2-4 hours</p>
             </div>
-            <div className="bg-cream-100 rounded-lg p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <div className="text-3xl mb-3">💬</div>
               <h3 className="font-semibold text-cream-900 mb-2">Live Chat</h3>
               <p className="text-cream-700 text-sm">Instant help from our support team</p>
             </div>
-            <div className="bg-cream-100 rounded-lg p-6">
+            <div className="bg-cream-100 border border-cream-200 rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
               <div className="text-3xl mb-3">📞</div>
               <h3 className="font-semibold text-cream-900 mb-2">Phone Support</h3>
               <p className="text-cream-700 text-sm">Speak directly with our experts</p>

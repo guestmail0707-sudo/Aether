@@ -114,7 +114,7 @@ const Services = () => {
               <div 
                 key={index}
                 className={`relative bg-cream-50 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 hover:transform hover:scale-105 animate-slide-up ${
-                  plan.popular ? 'ring-2 ring-cream-600' : ''
+                  plan.popular ? 'ring-2 ring-cream-600 border-2 border-cream-600' : 'border border-cream-300'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
@@ -151,19 +151,19 @@ const Services = () => {
                   </div>
 
                   <div className="space-y-4 mb-6 text-sm">
-                    <div className="bg-cream-200 p-4 rounded-lg">
+                    <div className="bg-cream-200 border border-cream-300 p-4 rounded-lg">
                       <h5 className="font-semibold text-cream-900 mb-2 flex items-center">
                         🛡️ Warranty Coverage
                       </h5>
                       <p className="text-cream-700">{plan.warranty}</p>
                     </div>
-                    <div className="bg-cream-200 p-4 rounded-lg">
+                    <div className="bg-cream-200 border border-cream-300 p-4 rounded-lg">
                       <h5 className="font-semibold text-cream-900 mb-2 flex items-center">
                         🚚 Delivery Information
                       </h5>
                       <p className="text-cream-700">{plan.delivery}</p>
                     </div>
-                    <div className="bg-cream-200 p-4 rounded-lg">
+                    <div className="bg-cream-200 border border-cream-300 p-4 rounded-lg">
                       <h5 className="font-semibold text-cream-900 mb-2 flex items-center">
                         ↩️ Return Policy
                       </h5>
@@ -238,7 +238,7 @@ const Services = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {additionalServices.map((service, index) => (
-              <div key={index} className="bg-cream-200 rounded-xl p-6 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="bg-cream-200 border border-cream-300 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <h3 className="text-xl font-semibold text-cream-900 mb-4">{service.title}</h3>
                 <p className="text-cream-700 mb-4">{service.description}</p>
                 <ul className="space-y-2">

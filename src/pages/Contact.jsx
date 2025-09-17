@@ -128,7 +128,7 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {contactInfo.map((info, index) => (
-              <div key={index} className="text-center bg-cream-200 rounded-xl p-6 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="text-center bg-cream-200 border border-cream-300 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <div className="text-4xl mb-4">{info.icon}</div>
                 <h3 className="text-xl font-semibold text-cream-900 mb-2">{info.title}</h3>
                 <p className="text-cream-700 font-medium mb-2">{info.content}</p>
@@ -235,7 +235,7 @@ const Contact = () => {
               
               <div className="space-y-4 mb-8">
                 {supportCategories.map((category, index) => (
-                  <div key={index} className="bg-cream-100 rounded-lg p-4 hover:bg-cream-200 transition-colors">
+                  <div key={index} className="bg-cream-100 border border-cream-200 rounded-lg p-4 hover:bg-cream-200 hover:border-cream-300 transition-all duration-200 shadow-sm hover:shadow-md">
                     <div className="flex items-start space-x-4">
                       <div className="text-2xl">{category.icon}</div>
                       <div>
@@ -248,6 +248,7 @@ const Contact = () => {
               </div>
 
               <div className="bg-gradient-to-r from-cream-200 to-cream-300 rounded-xl p-6">
+              <div className="bg-gradient-to-r from-cream-200 to-cream-300 border border-cream-400 rounded-xl p-6 shadow-md">
                 <h4 className="font-semibold text-cream-900 mb-3">🚀 Priority Support</h4>
                 <p className="text-cream-700 mb-4 text-sm">
                   Aether Soul Pro users get priority support with faster response times and dedicated account managers.
@@ -275,7 +276,7 @@ const Contact = () => {
 
           <div className="grid md:grid-cols-3 gap-8">
             {officeLocations.map((location, index) => (
-              <div key={index} className="bg-cream-100 rounded-xl p-6 text-center animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div key={index} className="bg-cream-100 border border-cream-200 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow duration-200 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
                 <h3 className="text-xl font-semibold text-cream-900 mb-2">{location.city}</h3>
                 <p className="text-cream-600 text-sm font-medium mb-3">{location.type}</p>
                 <p className="text-cream-700 mb-2">{location.address}</p>
