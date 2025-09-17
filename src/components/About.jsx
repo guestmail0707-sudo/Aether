@@ -23,7 +23,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-primary-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -39,7 +39,7 @@ const About = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="text-center p-6 rounded-xl bg-gray-50 hover:bg-primary-50 transition-all duration-300 hover:transform hover:scale-105 animate-slide-up"
+              className="text-center p-6 rounded-xl bg-primary-100 hover:bg-primary-200 transition-all duration-300 hover:transform hover:scale-105 animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="text-4xl mb-4">{feature.icon}</div>
@@ -62,15 +62,15 @@ const About = () => {
               </p>
               <ul className="space-y-3">
                 <li className="flex items-center text-gray-700">
-                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
                   24/7 emotional support and companionship
                 </li>
                 <li className="flex items-center text-gray-700">
-                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
                   Learns and adapts to your unique personality
                 </li>
                 <li className="flex items-center text-gray-700">
-                  <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <span className="w-2 h-2 bg-primary-600 rounded-full mr-3"></span>
                   Safe, private, and non-judgmental interactions
                 </li>
               </ul>

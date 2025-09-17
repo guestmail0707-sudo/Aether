@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-teal-50 pt-16">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-cream-50 via-cream to-primary-50 pt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="text-center lg:text-left animate-fade-in">
@@ -16,7 +16,7 @@ const Hero = () => {
               <button className="bg-primary-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary-700 transform hover:scale-105 transition-all duration-200 shadow-lg hover:shadow-xl cursor-pointer">
                 Get Started Today
               </button>
-              <button className="border border-gray-300 text-gray-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200 cursor-pointer">
+              <button className="border border-primary-300 text-primary-700 px-8 py-4 rounded-lg font-semibold hover:bg-primary-50 transition-all duration-200 cursor-pointer">
                 Learn More
               </button>
             </div>
