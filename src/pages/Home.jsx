@@ -215,7 +215,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-cream-100">
+      <section className="py-20 bg-cream-100 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-cream-900 mb-4">
@@ -226,27 +226,7 @@ const Home = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-cream-200 border border-cream-300 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-200">
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <span key={i} className="text-cream-600 text-xl">⭐</span>
-                  ))}
-                </div>
-                <p className="text-cream-700 mb-4 leading-relaxed">
-                  "{testimonial.content}"
-                </p>
-                <div>
-                  <div className="font-semibold text-cream-900">{testimonial.name}</div>
-                  <div className="text-cream-600 text-sm">{testimonial.role}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-    {/* Moving Reviews Section */}
+          {/* Moving Reviews Section */}
         {/* First Row - Moving Left to Right */}
         <div className="mb-8">
           <div className="flex animate-scroll-left space-x-6">
@@ -310,6 +290,8 @@ const Home = () => {
             ))}
           </div>
         </div>
+        </div>
+      </section>
     </div>
   );
 };
