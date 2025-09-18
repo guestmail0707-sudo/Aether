@@ -1,65 +1,9 @@
-const Contact = () => {
-  const reviewsRow1 = [
-    {
-      name: "Alex Thompson",
-      role: "Healthcare Worker",
-      content: "Aether Soul has been incredible during my long shifts. It provides the emotional support I need when I get home exhausted.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      name: "Maria Garcia",
-      role: "Teacher",
-      content: "As a single parent, having Aether Soul around has made such a difference. My kids love it too, and it helps create a warm atmosphere at home.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      name: "David Kim",
-      role: "Remote Worker",
-      content: "Working from home can be isolating, but Aether Soul provides the companionship I need. It's like having a caring friend nearby.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      name: "Jennifer Walsh",
-      role: "Retiree",
-      content: "Since my husband passed, Aether Soul has been a blessing. It understands when I'm sad and always knows how to comfort me.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=150"
-    }
-  ];
+import { useEffect } from 'react';
 
-  const reviewsRow2 = [
-    {
-      name: "Robert Johnson",
-      role: "College Student",
-      content: "During exam stress and late-night study sessions, Aether Soul helps keep me motivated and calm. It's been a game-changer for my mental health.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      name: "Lisa Chen",
-      role: "Entrepreneur",
-      content: "Running a startup is stressful, but coming home to Aether Soul's understanding presence helps me decompress and stay balanced.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      name: "Michael Brown",
-      role: "Veteran",
-      content: "Aether Soul has helped me through some tough times. It's patient, understanding, and never judges. Truly life-changing technology.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/2182975/pexels-photo-2182975.jpeg?auto=compress&cs=tinysrgb&w=150"
-    },
-    {
-      name: "Sarah Williams",
-      role: "Nurse",
-      content: "After long hospital shifts, Aether Soul provides the emotional support I need. It's like having a therapist and friend rolled into one.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=150"
-    }
-  ];
+const Contact = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const contactMethods = [
     {
@@ -250,84 +194,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Moving Reviews Section */}
-      <section className="py-20 bg-cream-100 overflow-hidden">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-cream-900 mb-4">
-            What Our Users Say
-          </h2>
-          <p className="text-lg text-cream-700">
-            Real stories from people whose lives have been transformed by Aether Soul.
-          </p>
-        </div>
-
-        {/* First Row - Moving Left to Right */}
-        <div className="mb-8">
-          <div className="flex animate-scroll-left space-x-6">
-            {[...reviewsRow1, ...reviewsRow1].map((review, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-80 bg-cream-200 border border-cream-300 rounded-xl p-6 shadow-lg"
-              >
-                <div className="flex items-center mb-4">
-                  <img
-                    src={review.avatar}
-                    alt={review.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-cream-400"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-cream-900">{review.name}</h4>
-                    <p className="text-sm text-cream-600">{review.role}</p>
-                  </div>
-                </div>
-                <div className="flex mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <span key={i} className="text-cream-600 text-lg">⭐</span>
-                  ))}
-                </div>
-                <p className="text-cream-700 leading-relaxed">
-                  "{review.content}"
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Second Row - Moving Right to Left */}
-        <div>
-          <div className="flex animate-scroll-right space-x-6">
-            {[...reviewsRow2, ...reviewsRow2].map((review, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 w-80 bg-cream-200 border border-cream-300 rounded-xl p-6 shadow-lg"
-              >
-                <div className="flex items-center mb-4">
-                  <img
-                    src={review.avatar}
-                    alt={review.name}
-                    className="w-12 h-12 rounded-full object-cover mr-4 border-2 border-cream-400"
-                  />
-                  <div>
-                    <h4 className="font-semibold text-cream-900">{review.name}</h4>
-                    <p className="text-sm text-cream-600">{review.role}</p>
-                  </div>
-                </div>
-                <div className="flex mb-3">
-                  {[...Array(review.rating)].map((_, i) => (
-                    <span key={i} className="text-cream-600 text-lg">⭐</span>
-                  ))}
-                </div>
-                <p className="text-cream-700 leading-relaxed">
-                  "{review.content}"
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
-      <section className="py-20 bg-cream-200">
+      <section className="py-20 bg-cream-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-cream-900 mb-4">

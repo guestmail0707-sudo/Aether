@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 const FAQs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const faqCategories = [
     {
       category: "General Questions",

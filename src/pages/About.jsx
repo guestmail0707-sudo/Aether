@@ -1,4 +1,10 @@
+import { useEffect } from 'react';
+
 const About = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const features = [
     {
       icon: "🤖",
@@ -19,34 +25,6 @@ const About = () => {
       icon: "🗣️",
       title: "Natural Conversation",
       description: "Engages in meaningful conversations with natural language processing and empathetic responses."
-    }
-  ];
-
-  const timeline = [
-    {
-      year: "2020",
-      title: "The Vision",
-      description: "Founded with the mission to revolutionize emotional wellness through AI companionship technology."
-    },
-    {
-      year: "2021",
-      title: "Research & Development",
-      description: "Extensive research into emotional AI, user psychology, and companion robotics began."
-    },
-    {
-      year: "2022",
-      title: "First Prototype",
-      description: "Successfully developed and tested the first Aether Soul prototype with beta users."
-    },
-    {
-      year: "2023",
-      title: "Market Launch",
-      description: "Officially launched Aether Soul to the public with overwhelming positive response."
-    },
-    {
-      year: "2024",
-      title: "Global Expansion",
-      description: "Expanded to 50+ countries, helping thousands find emotional support and companionship."
     }
   ];
 
@@ -154,36 +132,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-cream-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-cream-900 mb-4">
-              Our Journey
-            </h2>
-            <p className="text-lg text-cream-700">
-              From vision to reality - the story of how Aether Soul came to life.
-            </p>
-          </div>
-
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex items-start space-x-6 animate-slide-up" style={{ animationDelay: `${index * 0.1}s` }}>
-                <div className="flex-shrink-0 w-20 h-20 bg-cream-600 border-2 border-cream-700 text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
-                  {item.year}
-                </div>
-                <div className="flex-1 bg-cream-100 border border-cream-200 rounded-lg p-6 shadow-sm">
-                  <h3 className="text-xl font-semibold text-cream-900 mb-2">{item.title}</h3>
-                  <p className="text-cream-700 leading-relaxed">{item.description}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Team Section */}
-      <section className="py-20 bg-cream-100">
+      <section className="py-20 bg-cream-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-cream-900 mb-4">
@@ -212,7 +162,7 @@ const About = () => {
       </section>
 
       {/* Values Section */}
-      <section className="py-20 bg-cream-200">
+      <section className="py-20 bg-cream-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-cream-900 mb-4">
